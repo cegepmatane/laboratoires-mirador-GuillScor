@@ -47,9 +47,9 @@ public class NouvelleDAO {
             for(int position = 0; position<listeNoeudsItems.getLength();position++) {
             	Element noeudItem = (Element)listeNoeudsItems.item(position);
             	String titre = noeudItem.getElementsByTagName("title").item(0).getTextContent();
-            	//System.out.println("Titre: " + titre);
-            	
+            	String date = noeudItem.getElementsByTagName("pubDate").item(0).getTextContent();
             	Nouvelle nouvelle = new Nouvelle(titre, "");
+            	nouvelle.setDate(date);
             	nouvelles.add(nouvelle);
             	}
         } catch (ParserConfigurationException | SAXException | IOException e) {

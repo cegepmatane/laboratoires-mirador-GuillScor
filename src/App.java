@@ -14,6 +14,7 @@ import donnee.StationSpatialeDAO;
 import donnee.ZeldaDAO;
 import modele.Nouvelle;
 import vue.VueMirador;
+import vue.VueNouvelles;
 import vue.VuePokemon;
 import vue.VueServanto;
 import vue.VueZelda;
@@ -21,11 +22,9 @@ import vue.VueZelda;
 public class App {
 
 	public static void main(String[] parametres) {
-		Controleur.choisirVuePrincipale(VueZelda.class);
+		Controleur.choisirVuePrincipale(VueNouvelles.class);
 		Fenetre.launch(Fenetre.class, parametres);	
 		
-		ZeldaDAO zeldaDAO = new ZeldaDAO();
-		zeldaDAO.listerZelda();
 		
 	}
 
