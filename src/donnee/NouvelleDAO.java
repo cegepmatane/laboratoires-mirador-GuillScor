@@ -31,6 +31,7 @@ public class NouvelleDAO {
 			Scanner lecteur = new Scanner(flux);
 			lecteur.useDelimiter("\\A");
 			xml = lecteur.next();
+			lecteur.close();
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
