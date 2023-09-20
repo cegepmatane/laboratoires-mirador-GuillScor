@@ -1,6 +1,7 @@
 package donnee;
 
 import java.io.IOException;
+
 import java.io.InputStream;
 import java.net.URL;
 import java.util.Scanner;
@@ -38,11 +39,9 @@ public class OperatorDAO {
 		String job = "";
 		for(int i = 0; i<=2;i++) {
 			JsonElement classJson = operatorJson.getAsJsonArray("class").get(i);
-			job += classJson.getAsString();
-			if(i<=1) {
-				job+="/";
-			}
+			job += classJson.getAsString() +"/";
 		}
+		job = job.substring(0, job.length() - 1);
 		operator.setJob(job);
 		System.out.println(job);
 		
