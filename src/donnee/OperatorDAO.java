@@ -3,7 +3,6 @@ package donnee;
 import java.io.IOException;
 import java.io.InputStream;
 import java.net.URL;
-import java.util.List;
 import java.util.Scanner;
 
 import com.google.gson.JsonElement;
@@ -14,7 +13,7 @@ import modele.Operator;
 
 public class OperatorDAO {
 
-	public void recupererOperator() {
+	public Operator recupererOperator() {
 		Operator operator = new Operator();
 		
 		String URL_RHODES_API ="https://rhodesapi.up.railway.app/api/operator/Fiammetta";
@@ -69,5 +68,6 @@ public class OperatorDAO {
 		System.out.println(description);
 		System.out.println(image1);
 		System.out.println(image2);
+		return operator;
 	}
 }

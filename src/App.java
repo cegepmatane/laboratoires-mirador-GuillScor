@@ -11,10 +11,9 @@ import donnee.NouvelleDAO;
 import donnee.OperatorDAO;
 import donnee.PokemonDAO;
 import donnee.ServantoDAO;
-import donnee.StationSpatialeDAO;
 import donnee.ZeldaDAO;
 import modele.Nouvelle;
-import vue.VueMirador;
+import vue.VueOperator;
 import vue.VueNouvelles;
 import vue.VuePokemon;
 import vue.VueServanto;
@@ -23,11 +22,8 @@ import vue.VueZelda;
 public class App {
 
 	public static void main(String[] parametres) {
-		//Controleur.choisirVuePrincipale(VueNouvelles.class);
-		//Fenetre.launch(Fenetre.class, parametres);	
-		
-		OperatorDAO operatorDAO = new OperatorDAO();
-		operatorDAO.recupererOperator();
+		Controleur.choisirVuePrincipale(VueOperator.class);
+		Fenetre.launch(Fenetre.class, parametres);	
 	}
 
 }
