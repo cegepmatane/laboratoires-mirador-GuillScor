@@ -1,8 +1,6 @@
 package vue;
 
 
-import java.util.List;
-
 import com.sun.media.jfxmedia.logging.Logger;
 
 import architecture.Vue;
