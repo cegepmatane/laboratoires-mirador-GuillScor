@@ -15,12 +15,12 @@ public class ChercheurDePokemon {
 	public void executer(){
 		List<Pokemon> selection = new ArrayList<Pokemon>();
 		
-		selection = filtrerSelonMotsClés(this.tousLesPokemons);
-		selection = filtrerSelonType(selection);
-		selection = filtrerSelonTailleMin(selection);
+		selection = filtrerSelonPoids(this.tousLesPokemons, 0, 10);
+		selection = filtrerSelonType(selection, "Steel");
+		selection = filtrerSelonTaille(selection, 0, 100);
 	}
 
-	public List<Pokemon> filtrerSelonTailleMin(List<Pokemon> pokemons) {
+	public List<Pokemon> filtrerSelonTaille(List<Pokemon> pokemons, float max, float min) {
 		List<Pokemon> selection = new ArrayList<Pokemon>();
 		for(Pokemon pokemon : pokemons) {
 			selection.add(pokemon);
@@ -28,7 +28,7 @@ public class ChercheurDePokemon {
 		return selection;
 	}
 
-	public List<Pokemon> filtrerSelonType(List<Pokemon> pokemons) {
+	public List<Pokemon> filtrerSelonType(List<Pokemon> pokemons, String type) {
 		List<Pokemon> selection = new ArrayList<Pokemon>();
 		for(Pokemon pokemon : pokemons) {
 			selection.add(pokemon);
@@ -36,7 +36,7 @@ public class ChercheurDePokemon {
 		return selection;
 	}
 
-	public List<Pokemon> filtrerSelonMotsClés(List<Pokemon> pokemons) {
+	public List<Pokemon> filtrerSelonPoids(List<Pokemon> pokemons, float max, float min) {
 		List<Pokemon> selection = new ArrayList<Pokemon>();
 		for(Pokemon pokemon : pokemons) {
 			selection.add(pokemon);
